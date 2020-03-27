@@ -15,7 +15,7 @@ phases:
       - echo $HOME
       - which python
       - which python3
-      - python -m unittest discover Tests
+      - python -m unittest Tests/test_handler.py
 artifacts:
   type: zip
   files:
