@@ -5,7 +5,9 @@ phases:
       - aws cloudformation package --template-file samTemplate.yml --s3-bucket infratests3 --output-template-file outputSamTemplate.yaml
       - python --version
       - echo $HOME
-      - print(os.getenv("HOME"))
+      - which python
+      - which python3
+      - print(os.getenv("HOME")
       - python -m unittest discover tests
 artifacts:
   type: zip
