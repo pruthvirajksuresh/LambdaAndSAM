@@ -10,6 +10,8 @@ phases:
       - sam --version
       - aws cloudformation package --template-file samTemplate.yml --s3-bucket infratests3 --output-template-file outputSamTemplate.yaml
       - python --version
+      - python3 --version
+      - python3 -B -m pytest -v tests/ --cov=.
       - echo $HOME
       - which python
       - which python3
