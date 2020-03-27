@@ -3,6 +3,9 @@ phases:
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yml --s3-bucket infratests3 --output-template-file outputSamTemplate.yaml
+      - python --version
+      - echo $HOME
+      - print(os.getenv("HOME"))
       - python -m unittest discover tests
 artifacts:
   type: zip
