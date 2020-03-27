@@ -11,6 +11,7 @@ def lambda_handler(event, context):
             'body': json.dumps(data),
             'headers': {'Content-Type': 'application/json'}}
 
+# Sample change
 # import boto3
 # import json
 
